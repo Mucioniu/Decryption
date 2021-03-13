@@ -42,26 +42,15 @@ oprim algoritmul si sa resetam semnalele. Conditia de oprire este stop_scriere =
 complet.
 
 Zigzag_decryption
-In modulul zigzag am creeat un bloc secvential in care verifica mai intai daca rst-ul este 1, apoi daca valid_i este 1 si busy este 0
-am stocat datele intr-un vector "date_stocate". In cazul in care se va da de "START_DECRYPTION_TOKEN" semnalul busy se seteaza pe 1 si aflu
-numarul de cicli si restul. Daca shiftez la dreapta cu 1 numarul de elemente e ca si cum as face "/" 2 iar restul este bitul 0 al numarului
-de elemente. Asta se aplica pentru key-ul 2, iar pentru key-ul 3 shifte la dreapta cu 2 iar restul este reprezentat de bitii [1:0].
-Am creat o conditie in cazul in care busy este 1, valid_i == 0 si valid_o == 0, ridicam valid_o pe 1, incepem afisarea primului caracter
-al decriptarii care mereu va fi cel de pe pozitia 0 din vector. Am creat niste semnale "pozitia_rand1", "pozitia_rand2", "pozitia_rand3"
-care reprezinta pozitia celor 3 randuri de decriptare. Acestea variaza in functie de valoarea key-ului si valoarea restului astfel:
-Pentru key = 2 rest 0 pozitia_rand2<=pozitia_rand2+cicli;
-	       rest 1 pozitia_rand2<=pozitia_rand2+cicli+rest;
-
-Pentru key = 3 rest 0 pozitia_rand2<=pozitia_rand2+cicli;
-		      pozitia_rand3<=pozitia_rand3+cicli+cicli+cicli;
-	       rest 1 pozitia_rand2<=pozitia_rand2+cicli+1;
-		      pozitia_rand3<=pozitia_rand3+cicli+cicli+cicli+1;	
-	       rest 2 pozitia_rand2<=pozitia_rand2+cicli+1;
-		      pozitia_rand3<=pozitia_rand3+cicli+cicli+cicli+2;
-	       rest 3 pozitia_rand2<=pozitia_rand2+cicli+1;
-		      pozitia_rand3<=pozitia_rand3+cicli+cicli+cicli+2;
-In urmatoarea conditie are loc decriptarea propriu-zisa, in care am creat un contor "contor" si se incrementeaza cu fiecare afisare a 
-unui caracter. Decriptarea se opreste cand au fost citite toate caracterele. La final setez toate datele pe 0
+Acelasi principiu ca la Scytale. Diferentaeste algoritmul
+Am folosit un algoritm de division prin care am calculat catul si restul impartirii numarului de caractere(variabila index) la ciclul unei 
+anumite chei(pentru fiecare cheie am initializat D cu alt numar). 
+Pentru fiecare cheia am luat cate un row pentru fiecare linie ce reprezinta de fapt indicele de la care pornim de pe fiecare linie. Am luat 
+aceste valori in functie de catul de la division. Restul ne ajuta sa vedem cum se modifica aceste valori de inceput. De asta am facut cazuri 
+pentru fiecare cheie cu resturile corespunzatoare in functie de ciclu. Pentru scrierea propriu-zisa in data_o am luat acele valori si in functie
+de randul la care ne aflam am extras caracterele. Am folosit cateva variabile auxiliare cum ar fi vizitat_2, vizitat_3 etc pentru a imi da seama
+daca ar trebui sa merg pe linia de sus sau pe cea de jos.
+nr_oprire este variabila care imi spune cand ma opresc si resetez valorile. 
 
 Demux 
 Am folosit 3 blocuri always: 2 secventiale pe frontul crescator al fiecarui ceas(mst sau sys) si unul combinational pentru a pune valorile.

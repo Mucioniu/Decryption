@@ -1,0 +1,444 @@
+ISim log file
+Running: tester.exe -intstyle ise -tclbatch ..\..\..\scripts\console.tcl 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 516096 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Access 0 Writting address: 0x00 with value 0
+Access 0 Writting address: 0x10 with value 1
+Access 0 Writting address: 0x12 with value 0
+Access 0 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 0 
+Testing data: BOBB SFNF SFTJ QFSF 
+Access 1 Writting address: 0x00 with value 1
+Access 1 Writting address: 0x10 with value 0
+Access 1 Writting address: 0x12 with value 520
+Access 1 Writting address: 0x14 with value 0
+Decryption 1 
+Testing data: ARNE ASAI RPEE MREE ˙ 
+Access 2 Writting address: 0x00 with value 2
+Access 2 Writting address: 0x10 with value 0
+Access 2 Writting address: 0x12 with value 0
+Access 2 Writting address: 0x14 with value 2
+Decryption 2 
+Testing data: AARM RSPR NAEE EIEE ˙ 
+Access 3 Writting address: 0x00 with value 2
+Access 3 Writting address: 0x10 with value 0
+Access 3 Writting address: 0x12 with value 0
+Access 3 Writting address: 0x14 with value 3
+Decryption 3 
+Testing data: ARRP NAEE EIEE AMSR ˙ 
+Access 4 Writting address: 0x00 with value 0
+Access 4 Writting address: 0x10 with value 21
+Access 4 Writting address: 0x12 with value 0
+Access 4 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 4 
+Testing data: l}é5 àÑ5à zá~Ñ äàT5 
+Access 5 Writting address: 0x00 with value 1
+Access 5 Writting address: 0x10 with value 0
+Access 5 Writting address: 0x12 with value 773
+Access 5 Writting address: 0x14 with value 0
+Decryption 5 
+Testing data: Woih  oys u es sr?˙ 
+Access 6 Writting address: 0x00 with value 2
+Access 6 Writting address: 0x10 with value 0
+Access 6 Writting address: 0x12 with value 0
+Access 6 Writting address: 0x14 with value 2
+Decryption 6 
+Testing data: Wys  eiu? h os ros˙ 
+Access 7 Writting address: 0x00 with value 2
+Access 7 Writting address: 0x10 with value 0
+Access 7 Writting address: 0x12 with value 0
+Access 7 Writting address: 0x14 with value 3
+Decryption 7 
+Testing data: Wseu h os rosy  i?˙ 
+Access 8 Writting address: 0x00 with value 0
+Access 8 Writting address: 0x10 with value 13
+Access 8 Writting address: 0x12 with value 0
+Access 8 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 8 
+Testing data: V-nz -t|v {t-Å |-zn xr-u vz-n {-|s sr- ur-p n{4Å -rs ÇÄr; 
+Access 9 Writting address: 0x00 with value 1
+Access 9 Writting address: 0x10 with value 0
+Access 9 Writting address: 0x12 with value 1036
+Access 9 Writting address: 0x14 with value 0
+Decryption 9 
+Testing data: Iona    n amo' maft  kf  geer o re ih f nihu gmes    e tac. ˙ 
+Access 10 Writting address: 0x00 with value 2
+Access 10 Writting address: 0x10 with value 0
+Access 10 Writting address: 0x12 with value 0
+Access 10 Writting address: 0x14 with value 2
+Decryption 10 
+Testing data: Ia o n om k i  nofr h a'  eue  mgi gt a ehma  fe  ecnt rfs. ˙ 
+Access 11 Writting address: 0x00 with value 2
+Access 11 Writting address: 0x10 with value 0
+Access 11 Writting address: 0x12 with value 0
+Access 11 Writting address: 0x14 with value 3
+Decryption 11 
+Testing data: I no kinf ha u  mgi gt a ehma  fe  ecnt rfs. ao m   or  'ee ˙ 
+Access 12 Writting address: 0x00 with value 0
+Access 12 Writting address: 0x10 with value 3
+Access 12 Writting address: 0x12 with value 0
+Access 12 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 12 
+Testing data: Pd|# wkh# Iruf h#eh #zlw k#|r x1## 
+Access 13 Writting address: 0x00 with value 1
+Access 13 Writting address: 0x10 with value 0
+Access 13 Writting address: 0x12 with value 525
+Access 13 Writting address: 0x14 with value 0
+Decryption 13 
+Testing data: M ab ye   twhi et h F oy rocu e.˙ 
+Access 14 Writting address: 0x00 with value 2
+Access 14 Writting address: 0x10 with value 0
+Access 14 Writting address: 0x12 with value 0
+Access 14 Writting address: 0x14 with value 2
+Decryption 14 
+Testing data: Myte Freb  ihy ua h  oc  ewt  o.˙ 
+Access 15 Writting address: 0x00 with value 2
+Access 15 Writting address: 0x10 with value 0
+Access 15 Writting address: 0x12 with value 0
+Access 15 Writting address: 0x14 with value 3
+Decryption 15 
+Testing data: MtFe  hua  h o c ew t o. yerb iy˙ 
+Access 16 Writting address: 0x00 with value 0
+Access 16 Writting address: 0x10 with value 18
+Access 16 Writting address: 0x12 with value 0
+Access 16 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 16 
+Testing data: [2~Å àw2Ü zw2Ö w~~ 2Åx2 ÄsÇs ~2{ Ä2Üz w2Å ÑÄ{Ä y@22 
+Access 17 Writting address: 0x00 with value 1
+Access 17 Writting address: 0x10 with value 0
+Access 17 Writting address: 0x12 with value 533
+Access 17 Writting address: 0x14 with value 0
+Decryption 17 
+Testing data: Ia p laol vme   itn h et  hse m em lolr  noi fn g n.˙ 
+Access 18 Writting address: 0x00 with value 2
+Access 18 Writting address: 0x10 with value 0
+Access 18 Writting address: 0x12 with value 0
+Access 18 Writting address: 0x14 with value 2
+Decryption 18 
+Testing data: Ilv  h ml  fnp l nt emri g oe tese lo a ami  h on n.˙ 
+Access 19 Writting address: 0x00 with value 2
+Access 19 Writting address: 0x10 with value 0
+Access 19 Writting address: 0x12 with value 0
+Access 19 Writting address: 0x14 with value 3
+Decryption 19 
+Testing data: Ivhm  nln erg  oete selo  aam i h  onn. l  l fp t mi˙ 
+Access 20 Writting address: 0x00 with value 0
+Access 20 Writting address: 0x10 with value 7
+Access 20 Writting address: 0x12 with value 0
+Access 20 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 20 
+Testing data: [ol' z{|m m'{o h{'k ylht z'hy l'th kl'v m5'' 
+Access 21 Writting address: 0x00 with value 1
+Access 21 Writting address: 0x10 with value 0
+Access 21 Writting address: 0x12 with value 529
+Access 21 Writting address: 0x14 with value 0
+Decryption 21 
+Testing data: Teha em s s ta urfe f  m tahd aet   odf r.˙ 
+Access 22 Writting address: 0x00 with value 2
+Access 22 Writting address: 0x10 with value 0
+Access 22 Writting address: 0x12 with value 0
+Access 22 Writting address: 0x14 with value 2
+Decryption 22 
+Testing data: Tesu fta  rasa emd  fh t f ht dem  r ae o.˙ 
+Access 23 Writting address: 0x00 with value 2
+Access 23 Writting address: 0x10 with value 0
+Access 23 Writting address: 0x12 with value 0
+Access 23 Writting address: 0x14 with value 3
+Decryption 23 
+Testing data: Tsfa rsed fh t f ht dem  r ae o.eu t aa m ˙ 
+Access 24 Writting address: 0x00 with value 0
+Access 24 Writting address: 0x10 with value 23
+Access 24 Writting address: 0x12 with value 0
+Access 24 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 24 
+Testing data: k|â |>ä7 ÖÜ7á Éxz| 7ÉÄÇ |7Ü Ñ|E7 
+Access 25 Writting address: 0x00 with value 1
+Access 25 Writting address: 0x10 with value 0
+Access 25 Writting address: 0x12 with value 777
+Access 25 Writting address: 0x14 with value 0
+Decryption 25 
+Testing data: Toih  kep erl  eah' cose m  e nl.˙ 
+Access 26 Writting address: 0x00 with value 2
+Access 26 Writting address: 0x10 with value 0
+Access 26 Writting address: 0x12 with value 0
+Access 26 Writting address: 0x14 with value 2
+Decryption 26 
+Testing data: Tees n lc  ieh m.hr ' op aelk  oe˙ 
+Access 27 Writting address: 0x00 with value 2
+Access 27 Writting address: 0x10 with value 0
+Access 27 Writting address: 0x12 with value 0
+Access 27 Writting address: 0x14 with value 3
+Decryption 27 
+Testing data: Tenl  emh r' o pael k oe es c ih.˙ 
+Access 28 Writting address: 0x00 with value 0
+Access 28 Writting address: 0x10 with value 30
+Access 28 Writting address: 0x12 with value 0
+Access 28 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 28 
+Testing data: qÜçï >ãÉ> íÜÉ> ãçåÉ ó?>> 
+Access 29 Writting address: 0x00 with value 1
+Access 29 Writting address: 0x10 with value 0
+Access 29 Writting address: 0x12 with value 521
+Access 29 Writting address: 0x14 with value 0
+Decryption 29 
+Testing data: Shhe o wm  omn ee y t!˙ 
+Access 30 Writting address: 0x00 with value 2
+Access 30 Writting address: 0x10 with value 0
+Access 30 Writting address: 0x12 with value 0
+Access 30 Writting address: 0x14 with value 2
+Decryption 30 
+Testing data: So e temn yhwm  h o e!˙ 
+Access 31 Writting address: 0x00 with value 2
+Access 31 Writting address: 0x10 with value 0
+Access 31 Writting address: 0x12 with value 0
+Access 31 Writting address: 0x14 with value 3
+Decryption 31 
+Testing data: S tm yhwm  h o e!oe en˙ 
+Access 32 Writting address: 0x00 with value 0
+Access 32 Writting address: 0x10 with value 23
+Access 32 Writting address: 0x12 with value 0
+Access 32 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 32 
+Testing data: pÜå7 zxÖ> ã7x Ö{É| 7ã| 7ãâå ã87 
+Access 33 Writting address: 0x00 with value 1
+Access 33 Writting address: 0x10 with value 0
+Access 33 Writting address: 0x12 with value 777
+Access 33 Writting address: 0x14 with value 0
+Decryption 33 
+Testing data: Y ho heua   nt cdra lune t' h tt!˙ 
+Access 34 Writting address: 0x00 with value 2
+Access 34 Writting address: 0x10 with value 0
+Access 34 Writting address: 0x12 with value 0
+Access 34 Writting address: 0x14 with value 2
+Decryption 34 
+Testing data: Yucn thnl  h r t!o  a' a dete tuh˙ 
+Access 35 Writting address: 0x00 with value 2
+Access 35 Writting address: 0x10 with value 0
+Access 35 Writting address: 0x12 with value 0
+Access 35 Writting address: 0x14 with value 3
+Decryption 35 
+Testing data: Yctn   to  a'  adet etuh unhl hr!˙ 
+Access 36 Writting address: 0x00 with value 0
+Access 36 Writting address: 0x10 with value 24
+Access 36 Writting address: 0x12 with value 0
+Access 36 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 36 
+Testing data: `áçã åáÜD 8è}8 Äyé} 8y8à äázÑ }ÖF8 
+Access 37 Writting address: 0x00 with value 1
+Access 37 Writting address: 0x10 with value 0
+Access 37 Writting address: 0x12 with value 777
+Access 37 Writting address: 0x14 with value 0
+Decryption 37 
+Testing data: Hw o epu  rsho tabo vlne e, m  a.˙ 
+Access 38 Writting address: 0x00 with value 2
+Access 38 Writting address: 0x10 with value 0
+Access 38 Writting address: 0x12 with value 0
+Access 38 Writting address: 0x14 with value 2
+Decryption 38 
+Testing data: Hutn  ehv   rb e.os o,w  aeap olm˙ 
+Access 39 Writting address: 0x00 with value 2
+Access 39 Writting address: 0x10 with value 0
+Access 39 Writting address: 0x12 with value 0
+Access 39 Writting address: 0x14 with value 3
+Decryption 39 
+Testing data: Ht h  reo so,w  aea polm unev  b.˙ 
+Access 40 Writting address: 0x00 with value 0
+Access 40 Writting address: 0x10 with value 26
+Access 40 Writting address: 0x12 with value 0
+Access 40 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 40 
+Testing data: eä :ìâè å:Äå Éà~ ç:}Ü âçF :|èé :ìâè å:à áÉ ç:}Ü âçå 
+Access 41 Writting address: 0x00 with value 1
+Access 41 Writting address: 0x10 with value 0
+Access 41 Writting address: 0x12 with value 1544
+Access 41 Writting address: 0x14 with value 0
+Decryption 41 
+Testing data: Krs  rse   b   efcu ecpr ltnl  io  eoye syms oneo ieud ,uer ˙ 
+Access 42 Writting address: 0x00 with value 2
+Access 42 Writting address: 0x10 with value 0
+Access 42 Writting address: 0x12 with value 0
+Access 42 Writting address: 0x14 with value 2
+Decryption 42 
+Testing data: Ke o rfin scoe  u o reei scoe epyu  red  ls, btyu  nme  lsr ˙ 
+Access 43 Writting address: 0x00 with value 2
+Access 43 Writting address: 0x10 with value 0
+Access 43 Writting address: 0x12 with value 0
+Access 43 Writting address: 0x14 with value 3
+Decryption 43 
+Testing data: K ri so   reso epyu  red  ls, btyu  nme  lsr eofn ceuo eice ˙ 
+Access 44 Writting address: 0x00 with value 0
+Access 44 Writting address: 0x10 with value 13
+Access 44 Writting address: 0x12 with value 0
+Access 44 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 44 
+Testing data: UnÄÅ n-yn -ÉvÄ Ån9- onoÜ ;--- 
+Access 45 Writting address: 0x00 with value 1
+Access 45 Writting address: 0x10 with value 0
+Access 45 Writting address: 0x12 with value 775
+Access 45 Writting address: 0x14 with value 0
+Decryption 45 
+Testing data: Ha,a   sv btia asb  tyla .˙ 
+Access 46 Writting address: 0x00 with value 2
+Access 46 Writting address: 0x10 with value 0
+Access 46 Writting address: 0x12 with value 0
+Access 46 Writting address: 0x14 with value 2
+Decryption 46 
+Testing data: Hsal  it, bb.a t av sa a y˙ 
+Access 47 Writting address: 0x00 with value 2
+Access 47 Writting address: 0x10 with value 0
+Access 47 Writting address: 0x12 with value 0
+Access 47 Writting address: 0x14 with value 3
+Decryption 47 
+Testing data: Ha t b.at  avs a ay sli, b˙ 
+Access 48 Writting address: 0x00 with value 0
+Access 48 Writting address: 0x10 with value 22
+Access 48 Writting address: 0x12 with value 0
+Access 48 Writting address: 0x14 with value 0
+Nu se poate imparti la 0
+Decryption 48 
+Testing data: YwàÜ {6z {ÉD6 i{ê {6ä~ {6zw è766 
+Access 49 Writting address: 0x00 with value 1
+Access 49 Writting address: 0x10 with value 0
+Access 49 Writting address: 0x12 with value 525
+Access 49 Writting address: 0x14 with value 0
+Decryption 49 
+Testing data: Ceai rzpe e  t dhie e md .a y S!˙ 
+Access 50 Writting address: 0x00 with value 2
+Access 50 Writting address: 0x10 with value 0
+Access 50 Writting address: 0x12 with value 0
+Access 50 Writting address: 0x14 with value 2
+Decryption 50 
+Testing data: Cred e.Si eted yap  im e z h  a!˙ 
+Access 51 Writting address: 0x00 with value 2
+Access 51 Writting address: 0x10 with value 0
+Access 51 Writting address: 0x12 with value 0
+Access 51 Writting address: 0x14 with value 3
+Decryption 51 
+Testing data: CeeS eeya p im  ez  h a! rd.i td˙ 
+[PASSED] Decryption 0 was done correctly: 
+A N A A R E M E R E S I P E R E 
+[PASSED] Decryption 1 was done correctly: 
+A N A A R E M E R E S I P E R E 
+[PASSED] Decryption 2 was done correctly: 
+A N A A R E M E R E S I P E R E 
+[PASSED] Decryption 3 was done correctly: 
+A N A A R E M E R E S I P E R E 
+[PASSED] Decryption 4 was done correctly: 
+W h y   s o   s e r i o u s ?   
+[PASSED] Decryption 5 was done correctly: 
+W h y   s o   s e r i o u s ? 
+[PASSED] Decryption 6 was done correctly: 
+W h y   s o   s e r i o u s ? 
+[PASSED] Decryption 7 was done correctly: 
+W h y   s o   s e r i o u s ? 
+[PASSED] Decryption 8 was done correctly: 
+I   a m   g o i n g   t o   m a k e   h i m   a n   o f f e r   h e   c a n ' t   r e f u s e . 
+[PASSED] Decryption 9 was done correctly: 
+I   a m   g o i n g   t o   m a k e   h i m   a n   o f f e r   h e   c a n ' t   r e f u s e . 
+[PASSED] Decryption 10 was done correctly: 
+I   a m   g o i n g   t o   m a k e   h i m   a n   o f f e r   h e   c a n ' t   r e f u s e . 
+[PASSED] Decryption 11 was done correctly: 
+I   a m   g o i n g   t o   m a k e   h i m   a n   o f f e r   h e   c a n ' t   r e f u s e . 
+[PASSED] Decryption 12 was done correctly: 
+M a y   t h e   F o r c e   b e   w i t h   y o u .     
+[PASSED] Decryption 13 was done correctly: 
+M a y   t h e   F o r c e   b e   w i t h   y o u . 
+[PASSED] Decryption 14 was done correctly: 
+M a y   t h e   F o r c e   b e   w i t h   y o u . 
+[PASSED] Decryption 15 was done correctly: 
+M a y   t h e   F o r c e   b e   w i t h   y o u . 
+[PASSED] Decryption 16 was done correctly: 
+I   l o v e   t h e   s m e l l   o f   n a p a l m   i n   t h e   m o r n i n g .     
+[PASSED] Decryption 17 was done correctly: 
+I   l o v e   t h e   s m e l l   o f   n a p a l m   i n   t h e   m o r n i n g . 
+[PASSED] Decryption 18 was done correctly: 
+I   l o v e   t h e   s m e l l   o f   n a p a l m   i n   t h e   m o r n i n g . 
+[PASSED] Decryption 19 was done correctly: 
+I   l o v e   t h e   s m e l l   o f   n a p a l m   i n   t h e   m o r n i n g . 
+[PASSED] Decryption 20 was done correctly: 
+T h e   s t u f f   t h a t   d r e a m s   a r e   m a d e   o f .     
+[PASSED] Decryption 21 was done correctly: 
+T h e   s t u f f   t h a t   d r e a m s   a r e   m a d e   o f . 
+[PASSED] Decryption 22 was done correctly: 
+T h e   s t u f f   t h a t   d r e a m s   a r e   m a d e   o f . 
+[PASSED] Decryption 23 was done correctly: 
+T h e   s t u f f   t h a t   d r e a m s   a r e   m a d e   o f . 
+[PASSED] Decryption 24 was done correctly: 
+T h e r e ' s   n o   p l a c e   l i k e   h o m e .   
+[PASSED] Decryption 25 was done correctly: 
+T h e r e ' s   n o   p l a c e   l i k e   h o m e . 
+[PASSED] Decryption 26 was done correctly: 
+T h e r e ' s   n o   p l a c e   l i k e   h o m e . 
+[PASSED] Decryption 27 was done correctly: 
+T h e r e ' s   n o   p l a c e   l i k e   h o m e . 
+[PASSED] Decryption 28 was done correctly: 
+S h o w   m e   t h e   m o n e y !     
+[PASSED] Decryption 29 was done correctly: 
+S h o w   m e   t h e   m o n e y ! 
+[PASSED] Decryption 30 was done correctly: 
+S h o w   m e   t h e   m o n e y ! 
+[PASSED] Decryption 31 was done correctly: 
+S h o w   m e   t h e   m o n e y ! 
+[PASSED] Decryption 32 was done correctly: 
+Y o u   c a n ' t   h a n d l e   t h e   t r u t h !   
+[PASSED] Decryption 33 was done correctly: 
+Y o u   c a n ' t   h a n d l e   t h e   t r u t h ! 
+[PASSED] Decryption 34 was done correctly: 
+Y o u   c a n ' t   h a n d l e   t h e   t r u t h ! 
+[PASSED] Decryption 35 was done correctly: 
+Y o u   c a n ' t   h a n d l e   t h e   t r u t h ! 
+[PASSED] Decryption 36 was done correctly: 
+H o u s t o n ,   w e   h a v e   a   p r o b l e m .   
+[PASSED] Decryption 37 was done correctly: 
+H o u s t o n ,   w e   h a v e   a   p r o b l e m . 
+[PASSED] Decryption 38 was done correctly: 
+H o u s t o n ,   w e   h a v e   a   p r o b l e m . 
+[PASSED] Decryption 39 was done correctly: 
+H o u s t o n ,   w e   h a v e   a   p r o b l e m . 
+[PASSED] Decryption 40 was done correctly: 
+K e e p   y o u r   f r i e n d s   c l o s e ,   b u t   y o u r   e n e m i e s   c l o s e r 
+[PASSED] Decryption 41 was done correctly: 
+K e e p   y o u r   f r i e n d s   c l o s e ,   b u t   y o u r   e n e m i e s   c l o s e r 
+[PASSED] Decryption 42 was done correctly: 
+K e e p   y o u r   f r i e n d s   c l o s e ,   b u t   y o u r   e n e m i e s   c l o s e r 
+[PASSED] Decryption 43 was done correctly: 
+K e e p   y o u r   f r i e n d s   c l o s e ,   b u t   y o u r   e n e m i e s   c l o s e r 
+[PASSED] Decryption 44 was done correctly: 
+H a s t a   l a   v i s t a ,   b a b y .       
+[PASSED] Decryption 45 was done correctly: 
+H a s t a   l a   v i s t a ,   b a b y . 
+[PASSED] Decryption 46 was done correctly: 
+H a s t a   l a   v i s t a ,   b a b y . 
+[PASSED] Decryption 47 was done correctly: 
+H a s t a   l a   v i s t a ,   b a b y . 
+[PASSED] Decryption 48 was done correctly: 
+C a r p e   d i e m .   S e i z e   t h e   d a y !     
+[PASSED] Decryption 49 was done correctly: 
+C a r p e   d i e m .   S e i z e   t h e   d a y ! 
+[PASSED] Decryption 50 was done correctly: 
+C a r p e   d i e m .   S e i z e   t h e   d a y ! 
+[PASSED] Decryption 51 was done correctly: 
+C a r p e   d i e m .   S e i z e   t h e   d a y ! 
+test ok
+Stopped at time : 48495 ns : File "F:/facultate/Anul III sem I/Arhitectura Calculatoarelor - REZOLVAT/tema 2/tema2_task3_checker/build/bin/tester/tester.v" Line 163

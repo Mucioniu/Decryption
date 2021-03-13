@@ -1,0 +1,1345 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tester.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tester"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : decryption_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\caesar_decryption.v" into library work
+Parsing module <caesar_decryption>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\decryption_regfile.v" into library work
+Parsing module <decryption_regfile>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\decryption_top.v" into library work
+Parsing module <decryption_top>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\demux.v" into library work
+Parsing module <demux>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\mux.v" into library work
+Parsing module <mux>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\scytale_decryption.v" into library work
+Parsing module <scytale_decryption>.
+Analyzing Verilog file "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\zigzag_decryption.v" into library work
+Parsing module <zigzag_decryption>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <decryption_top>.
+
+Elaborating module <decryption_regfile(addr_witdth=8,reg_width=16)>.
+WARNING:HDLCompiler:413 - "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\decryption_regfile.v" Line 132: Result of 16-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <demux(MST_DWIDTH=32,SYS_DWIDTH=8)>.
+WARNING:HDLCompiler:413 - "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\demux.v" Line 76: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <caesar_decryption(D_WIDTH=8,KEY_WIDTH=16)>.
+WARNING:HDLCompiler:413 - "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\caesar_decryption.v" Line 45: Result of 16-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <scytale_decryption(D_WIDTH=8,KEY_WIDTH=8,MAX_NOF_CHARS=50,START_DECRYPTION_TOKEN=8'b11111010)>.
+WARNING:HDLCompiler:413 - "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\scytale_decryption.v" Line 73: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <zigzag_decryption(D_WIDTH=8,KEY_WIDTH=8,MAX_NOF_CHARS=50,START_DECRYPTION_TOKEN=8'b11111010)>.
+"F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\zigzag_decryption.v" Line 82. $display Nu se poate imparti la 0
+WARNING:HDLCompiler:413 - "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\zigzag_decryption.v" Line 116: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <mux(D_WIDTH=8)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <decryption_top>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\decryption_top.v".
+        addr_witdth = 8
+        reg_width = 16
+        MST_DWIDTH = 32
+        SYS_DWIDTH = 8
+    Summary:
+	no macro.
+Unit <decryption_top> synthesized.
+
+Synthesizing Unit <decryption_regfile>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\decryption_regfile.v".
+        addr_witdth = 8
+        reg_width = 16
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <error>.
+    Found 16-bit register for signal <rdata>.
+    Found 64-bit register for signal <n0136[63:0]>.
+    Summary:
+	inferred  82 D-type flip-flop(s).
+	inferred 103 Multiplexer(s).
+Unit <decryption_regfile> synthesized.
+
+Synthesizing Unit <demux>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\demux.v".
+        MST_DWIDTH = 32
+        SYS_DWIDTH = 8
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <valid1_o>.
+    Found 1-bit register for signal <valid2_o>.
+    Found 32-bit register for signal <v>.
+    Found 3-bit register for signal <counter_clk_sys>.
+    Found 1-bit register for signal <valid0_o>.
+    Found 3-bit adder for signal <counter_clk_sys[2]_GND_3_o_add_11_OUT> created at line 76.
+    Found 5-bit subtractor for signal <GND_3_o_GND_3_o_sub_18_OUT<4:0>> created at line 85.
+    Found 63-bit shifter logical right for signal <n0045> created at line 85
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <demux> synthesized.
+
+Synthesizing Unit <caesar_decryption>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\caesar_decryption.v".
+        D_WIDTH = 8
+        KEY_WIDTH = 16
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <valid_o>.
+    Found 8-bit register for signal <data_o>.
+    Found 8-bit subtractor for signal <GND_4_o_key[15]_sub_3_OUT<7:0>> created at line 45.
+    WARNING:Xst:2404 -  FFs/Latches <busy<0:0>> (without init value) have a constant value of 0 in block <caesar_decryption>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <caesar_decryption> synthesized.
+
+Synthesizing Unit <scytale_decryption>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\scytale_decryption.v".
+        D_WIDTH = 8
+        KEY_WIDTH = 8
+        MAX_NOF_CHARS = 50
+        START_DECRYPTION_TOKEN = 8'b11111010
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <v>, simulation mismatch.
+    Found 51x8-bit dual-port RAM <Mram_v> for signal <v>.
+    Found 1-bit register for signal <busy>.
+    Found 32-bit register for signal <oprire_citire>.
+    Found 6-bit register for signal <index>.
+    Found 1-bit register for signal <valid_o>.
+    Found 32-bit register for signal <i>.
+    Found 32-bit register for signal <stop_scriere>.
+    Found 32-bit register for signal <detector_repetare>.
+    Found 32-bit register for signal <index_citire>.
+    Found 2-bit register for signal <wait_valid>.
+    Found 8-bit register for signal <data_o>.
+    Found 6-bit adder for signal <index[5]_GND_5_o_add_6_OUT> created at line 73.
+    Found 32-bit adder for signal <i[31]_GND_5_o_add_15_OUT> created at line 81.
+    Found 32-bit adder for signal <stop_scriere[31]_GND_5_o_add_16_OUT> created at line 82.
+    Found 32-bit adder for signal <detector_repetare[31]_GND_5_o_add_17_OUT> created at line 83.
+    Found 32-bit adder for signal <index_citire[31]_GND_5_o_add_19_OUT> created at line 85.
+    Found 17-bit adder for signal <n0131[16:0]> created at line 94.
+    Found 8x8-bit multiplier for signal <key_N[7]_key_M[7]_MuLt_35_OUT> created at line 94.
+    Found 32-bit comparator equal for signal <detector_repetare[31]_GND_5_o_equal_19_o> created at line 84
+    Found 32-bit comparator equal for signal <stop_scriere[31]_GND_5_o_equal_38_o> created at line 94
+    Found 6-bit comparator equal for signal <_n0137> created at line 49
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 178 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <scytale_decryption> synthesized.
+
+Synthesizing Unit <zigzag_decryption>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\zigzag_decryption.v".
+        D_WIDTH = 8
+        KEY_WIDTH = 8
+        MAX_NOF_CHARS = 50
+        START_DECRYPTION_TOKEN = 8'b11111010
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <data_o>.
+    Found 1-bit register for signal <busy>.
+    Found 32-bit register for signal <oprire_citire>.
+    Found 6-bit register for signal <index>.
+    Found 1-bit register for signal <valid_o>.
+    Found 32-bit register for signal <which_row>.
+    Found 32-bit register for signal <row1>.
+    Found 32-bit register for signal <row2>.
+    Found 32-bit register for signal <row3>.
+    Found 32-bit register for signal <row4>.
+    Found 32-bit register for signal <row5>.
+    Found 32-bit register for signal <allow_key>.
+    Found 32-bit register for signal <nr_oprire>.
+    Found 32-bit register for signal <vizitat_3>.
+    Found 32-bit register for signal <vizitat_2>.
+    Found 2-bit register for signal <wait_valid>.
+    Found finite state machine <FSM_2> for signal <wait_valid>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | nr_oprire[31]_GND_7_o_equal_406_o (positive)       |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_0> for signal <vizitat_3>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 35                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | nr_oprire[31]_GND_7_o_equal_406_o (positive)       |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000000000000000000000000000000               |
+    | Power Up State     | 00000000000000000000000000000000               |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <vizitat_2>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | nr_oprire[31]_GND_7_o_equal_406_o (positive)       |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000000000000000000000000000000               |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_11_OUT> created at line 102.
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_15_OUT> created at line 102.
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_18_OUT> created at line 102.
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_21_OUT> created at line 102.
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_24_OUT> created at line 102.
+    Found 6-bit subtractor for signal <GND_7_o_D[5]_sub_27_OUT> created at line 102.
+    Found 6-bit adder for signal <index[5]_GND_7_o_add_35_OUT> created at line 116.
+    Found 9-bit adder for signal <n0699[8:0]> created at line 189.
+    Found 10-bit adder for signal <n0701[9:0]> created at line 190.
+    Found 10-bit adder for signal <n0703[9:0]> created at line 191.
+    Found 10-bit adder for signal <n0705[9:0]> created at line 196.
+    Found 10-bit adder for signal <n0707[9:0]> created at line 197.
+    Found 10-bit adder for signal <n0709[9:0]> created at line 203.
+    Found 10-bit adder for signal <n0711[9:0]> created at line 209.
+    Found 10-bit adder for signal <n0713[9:0]> created at line 214.
+    Found 10-bit adder for signal <n0715[9:0]> created at line 215.
+    Found 7-bit adder for signal <n0717[6:0]> created at line 218.
+    Found 9-bit adder for signal <n0719[8:0]> created at line 219.
+    Found 10-bit adder for signal <n0721[9:0]> created at line 220.
+    Found 10-bit adder for signal <n0723[9:0]> created at line 221.
+    Found 32-bit adder for signal <nr_oprire[31]_GND_7_o_add_223_OUT> created at line 228.
+    Found 32-bit adder for signal <row1[31]_GND_7_o_add_226_OUT> created at line 232.
+    Found 32-bit adder for signal <row2[31]_GND_7_o_add_229_OUT> created at line 237.
+    Found 32-bit adder for signal <row3[31]_GND_7_o_add_249_OUT> created at line 262.
+    Found 32-bit adder for signal <row4[31]_GND_7_o_add_283_OUT> created at line 300.
+    Found 32-bit adder for signal <row5[31]_GND_7_o_add_332_OUT> created at line 349.
+    Found 7-bit adder for signal <n0737[6:0]> created at line 359.
+    Found 2x6-bit multiplier for signal <PWR_8_o_Q[5]_MuLt_158_OUT> created at line 219.
+    Found 3x6-bit multiplier for signal <PWR_8_o_Q[5]_MuLt_160_OUT> created at line 220.
+    Found 3x6-bit multiplier for signal <PWR_8_o_Q[5]_MuLt_162_OUT> created at line 221.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <v>, simulation mismatch.
+    Found 51x8-bit dual-port RAM <Mram_v> for signal <v>.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0913> created at line 157.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0916> created at line 157.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0919> created at line 157.
+    Found 32-bit 3-to-1 multiplexer for signal <_n0925> created at line 187.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0928> created at line 187.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0931> created at line 187.
+    Found 32-bit 6-to-1 multiplexer for signal <_n0940> created at line 133.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0952> created at line 234.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0961> created at line 247.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0964> created at line 247.
+    Found 8-bit 7-to-1 multiplexer for signal <_n0973> created at line 273.
+    Found 8-bit 7-to-1 multiplexer for signal <_n0985> created at line 310.
+    Found 32-bit 7-to-1 multiplexer for signal <_n0988> created at line 310.
+WARNING:Xst:737 - Found 1-bit latch for signal <D<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <D<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <D<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <D<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 6-bit comparator lessequal for signal <n0008> created at line 101
+    Found 6-bit comparator lessequal for signal <n0013> created at line 101
+    Found 6-bit comparator lessequal for signal <n0018> created at line 101
+    Found 6-bit comparator lessequal for signal <n0023> created at line 101
+    Found 6-bit comparator lessequal for signal <n0028> created at line 101
+    Found 6-bit comparator lessequal for signal <n0033> created at line 101
+    Found 32-bit comparator equal for signal <nr_oprire[31]_GND_7_o_equal_406_o> created at line 359
+    Found 6-bit comparator equal for signal <_n0755> created at line 57
+    Found 6-bit comparator equal for signal <_n0761> created at line 57
+    Found 6-bit comparator equal for signal <_n0779> created at line 57
+    Found 6-bit comparator equal for signal <_n0805> created at line 57
+    Found 6-bit comparator equal for signal <_n0840> created at line 57
+    Summary:
+	inferred   5 RAM(s).
+	inferred   3 Multiplier(s).
+	inferred  27 Adder/Subtractor(s).
+	inferred 304 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred  12 Comparator(s).
+	inferred 117 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
+Unit <zigzag_decryption> synthesized.
+
+Synthesizing Unit <mux>.
+    Related source file is "F:\facultate\Anul III sem I\Arhitectura Calculatoarelor - REZOLVAT\tema 2\tema2_task3_checker\mux.v".
+        D_WIDTH = 8
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <data_o>.
+    Found 1-bit register for signal <valid_o>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <mux> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 51x8-bit dual-port RAM                                : 6
+# Multipliers                                          : 4
+ 6x2-bit multiplier                                    : 1
+ 6x3-bit multiplier                                    : 2
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 36
+ 10-bit adder                                          : 10
+ 17-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 10
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 6
+ 7-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+# Registers                                            : 36
+ 1-bit register                                        : 11
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 15
+ 6-bit register                                        : 2
+ 64-bit register                                       : 1
+ 8-bit register                                        : 4
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Comparators                                          : 15
+ 32-bit comparator equal                               : 3
+ 6-bit comparator equal                                : 6
+ 6-bit comparator lessequal                            : 6
+# Multiplexers                                         : 238
+ 1-bit 2-to-1 multiplexer                              : 114
+ 16-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 70
+ 32-bit 3-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 6-to-1 multiplexer                             : 1
+ 32-bit 7-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 9
+ 64-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 28
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 7-to-1 multiplexer                              : 2
+# Logic shifters                                       : 1
+ 63-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <allow_key_7> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_6> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_5> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_4> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_3> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_2> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_1> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_31> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_30> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_29> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_28> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_27> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_26> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_25> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_24> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_23> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_22> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_21> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_20> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_19> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_18> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_17> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_16> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_31> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_30> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_29> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_28> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_27> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_26> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_25> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_24> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_23> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_22> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_21> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_20> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_19> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_18> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_17> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_16> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_15> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_14> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_13> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_12> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_11> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_10> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_9> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <allow_key_8> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_23> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_22> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_21> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_20> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_19> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_18> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_17> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_16> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_15> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_14> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_13> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_12> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_11> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_10> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_9> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_8> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_7> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_6> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_5> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_4> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_3> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_2> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_1> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_0> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_15> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_14> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_13> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_12> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_11> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_10> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_9> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_8> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_7> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_6> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_5> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_4> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_3> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_2> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_1> has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <D_4> (without init value) has a constant value of 0 in block <m_zigzag>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_31> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_30> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_29> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_28> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_27> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_26> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_25> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <oprire_citire_24> has a constant value of 0 in block <m_scytale>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <wait_valid_1> of sequential type is unconnected in block <m_scytale>.
+
+Synthesizing (advanced) Unit <demux>.
+The following registers are absorbed into counter <counter_clk_sys>: 1 register on signal <counter_clk_sys>.
+Unit <demux> synthesized (advanced).
+
+Synthesizing (advanced) Unit <scytale_decryption>.
+The following registers are absorbed into counter <index_citire>: 1 register on signal <index_citire>.
+The following registers are absorbed into counter <detector_repetare>: 1 register on signal <detector_repetare>.
+The following registers are absorbed into counter <index>: 1 register on signal <index>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <i> prevents it from being combined with the RAM <Mram_v> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_5_o_OR_41_o_0> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <i<5:0>>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <scytale_decryption> synthesized (advanced).
+
+Synthesizing (advanced) Unit <zigzag_decryption>.
+INFO:Xst:3231 - The small RAM <Mram_v> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_7_o_OR_67_o_0> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0726<5:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_v3> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_7_o_OR_67_o_3> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0732<5:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_v4> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_7_o_OR_67_o_4> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0734<5:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_v1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_7_o_OR_67_o_1> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0728<5:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_v2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_i[7]_GND_7_o_OR_67_o_2> | low      |
+    |     addrA          | connected to signal <index>         |          |
+    |     diA            | connected to signal <data_i>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 51-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0730<5:0>>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <zigzag_decryption> synthesized (advanced).
+WARNING:Xst:2677 - Node <wait_valid_1> of sequential type is unconnected in block <scytale_decryption>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 51x8-bit dual-port distributed RAM                    : 6
+# Multipliers                                          : 4
+ 6x2-bit multiplier                                    : 1
+ 6x3-bit multiplier                                    : 2
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 34
+ 10-bit adder                                          : 10
+ 17-bit adder                                          : 1
+ 32-bit adder                                          : 10
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 6
+ 7-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+# Counters                                             : 4
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 546
+ Flip-Flops                                            : 546
+# Comparators                                          : 15
+ 32-bit comparator equal                               : 3
+ 6-bit comparator equal                                : 6
+ 6-bit comparator lessequal                            : 6
+# Multiplexers                                         : 238
+ 1-bit 2-to-1 multiplexer                              : 114
+ 16-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 70
+ 32-bit 3-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 6-to-1 multiplexer                             : 1
+ 32-bit 7-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 9
+ 64-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 28
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 7-to-1 multiplexer                              : 2
+# Logic shifters                                       : 1
+ 63-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <oprire_citire_31> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_30> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_29> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_28> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_27> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_26> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_25> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_24> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_23> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_22> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_21> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_20> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_19> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_18> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_17> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_16> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_15> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_14> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_13> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_12> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_11> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_10> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_9> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_8> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_7> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_6> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_5> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_4> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_3> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_2> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_1> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_0> has a constant value of 0 in block <scytale_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <D_4> (without init value) has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_1> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_2> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_3> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_4> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_5> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_6> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_7> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_8> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_9> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_10> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_11> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_12> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_13> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_14> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_15> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_16> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_17> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_18> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_19> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_20> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_21> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_22> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_23> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_24> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_25> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_26> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_27> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_28> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_29> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_30> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <allow_key_31> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_1> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_2> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_3> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_4> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_5> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_6> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_7> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_8> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_9> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_10> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_11> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_12> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_13> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_14> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_15> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_16> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_17> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_18> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_19> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_20> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_21> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_22> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_23> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_24> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_25> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_26> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_27> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_28> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_29> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_30> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <oprire_citire_31> has a constant value of 0 in block <zigzag_decryption>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m_zigzag/FSM_2> on signal <wait_valid[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m_zigzag/FSM_0> on signal <vizitat_3[1:1]> with sequential encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 0
+ 00000000000000000000000000000001 | 1
+----------------------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m_zigzag/FSM_1> on signal <vizitat_2[1:1]> with sequential encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 0
+ 00000000000000000000000000000001 | 1
+----------------------------------------------
+WARNING:Xst:1710 - FF/Latch <regs_0_2> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_3> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_4> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_5> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_6> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_7> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_8> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_9> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_10> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_11> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_12> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_13> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_14> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <regs_0_15> (without init value) has a constant value of 0 in block <decryption_regfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <i_6> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_7> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_8> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_9> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_10> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_11> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_12> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_13> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_14> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_15> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_16> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_17> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_18> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_19> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_20> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_21> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_22> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_23> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_24> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_25> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_26> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_27> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_28> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_29> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_30> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <i_31> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_6> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_7> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_8> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_9> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_10> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_11> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_12> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_13> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_14> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_15> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_16> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_17> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_18> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_19> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_20> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_21> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_22> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_23> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_24> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_25> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_26> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_27> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_28> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_29> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_30> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <index_citire_31> of sequential type is unconnected in block <scytale_decryption>.
+WARNING:Xst:2677 - Node <row3_6> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_7> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_8> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_9> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_10> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_11> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_12> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_13> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_14> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_15> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_16> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_17> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_18> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_19> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_20> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_21> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_22> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_23> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_24> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_25> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_26> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_27> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_28> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_29> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_30> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row3_31> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_6> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_7> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_8> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_9> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_10> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_11> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_12> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_13> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_14> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_15> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_16> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_17> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_18> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_19> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_20> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_21> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_22> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_23> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_24> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_25> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_26> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_27> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_28> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_29> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_30> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row1_31> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_6> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_7> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_8> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_9> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_10> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_11> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_12> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_13> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_14> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_15> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_16> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_17> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_18> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_19> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_20> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_21> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_22> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_23> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_24> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_25> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_26> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_27> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_28> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_29> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_30> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row5_31> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_6> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_7> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_8> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_9> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_10> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_11> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_12> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_13> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_14> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_15> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_16> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_17> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_18> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_19> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_20> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_21> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_22> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_23> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_24> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_25> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_26> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_27> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_28> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_29> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_30> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row2_31> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_6> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_7> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_8> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_9> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_10> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_11> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_12> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_13> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_14> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_15> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_16> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_17> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_18> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_19> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_20> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_21> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_22> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_23> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_24> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_25> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_26> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_27> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_28> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_29> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_30> of sequential type is unconnected in block <zigzag_decryption>.
+WARNING:Xst:2677 - Node <row4_31> of sequential type is unconnected in block <zigzag_decryption>.
+
+Optimizing unit <decryption_top> ...
+
+Optimizing unit <demux> ...
+
+Optimizing unit <decryption_regfile> ...
+
+Optimizing unit <caesar_decryption> ...
+
+Optimizing unit <scytale_decryption> ...
+
+Optimizing unit <zigzag_decryption> ...
+
+Optimizing unit <mux> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block decryption_top, actual ratio is 17.
+FlipFlop m_reg/regs_0_48 has been replicated 3 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop m_reg/regs_0_48 connected to a primary input has been replicated
+FlipFlop m_reg/regs_0_49 has been replicated 3 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop m_reg/regs_0_49 connected to a primary input has been replicated
+FlipFlop m_reg/regs_0_50 has been replicated 3 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop m_reg/regs_0_50 connected to a primary input has been replicated
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 341
+ Flip-Flops                                            : 341
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tester.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2180
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 149
+#      LUT2                        : 126
+#      LUT2_D                      : 17
+#      LUT2_L                      : 8
+#      LUT3                        : 239
+#      LUT3_D                      : 42
+#      LUT3_L                      : 36
+#      LUT4                        : 819
+#      LUT4_D                      : 114
+#      LUT4_L                      : 86
+#      MUXCY                       : 245
+#      MUXF5                       : 85
+#      VCC                         : 1
+#      XORCY                       : 200
+# FlipFlops/Latches                : 344
+#      FD                          : 1
+#      FDE                         : 46
+#      FDR                         : 96
+#      FDRE                        : 174
+#      FDRS                        : 2
+#      FDS                         : 1
+#      FDSE                        : 21
+#      LD                          : 3
+# RAMS                             : 192
+#      RAM16X1D                    : 192
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 88
+#      IBUF                        : 60
+#      OBUF                        : 28
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      963  out of   4656    20%  
+ Number of Slice Flip Flops:            310  out of   9312     3%  
+ Number of 4 input LUTs:               2032  out of   9312    21%  
+    Number used as logic:              1648
+    Number used as RAMs:                384
+ Number of IOs:                          90
+ Number of bonded IOBs:                  90  out of    232    38%  
+    IOB Flip Flops:                      34
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)  | Load  |
+---------------------------------------------------------------------+------------------------+-------+
+clk_sys                                                              | BUFGP                  | 498   |
+clk_mst                                                              | BUFGP                  | 35    |
+m_zigzag/GND_7_o_GND_7_o_OR_54_o(m_zigzag/GND_7_o_GND_7_o_OR_54_o1:O)| NONE(*)(m_zigzag/D_2)  | 3     |
+---------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 30.548ns (Maximum Frequency: 32.735MHz)
+   Minimum input arrival time before clock: 8.100ns
+   Maximum output required time after clock: 5.749ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sys'
+  Clock period: 30.548ns (frequency: 32.735MHz)
+  Total number of paths / destination ports: 1165106709 / 2309
+-------------------------------------------------------------------------
+Delay:               30.548ns (Levels of Logic = 25)
+  Source:            m_reg/regs_0_51 (FF)
+  Destination:       m_zigzag/data_o_7 (FF)
+  Source Clock:      clk_sys rising
+  Destination Clock: clk_sys rising
+
+  Data Path: m_reg/regs_0_51 to m_zigzag/data_o_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.591   0.706  m_reg/regs_0_51 (m_reg/regs_0_51)
+     LUT2_D:I0->LO         1   0.704   0.104  m_zigzag/_n0896<7>_SW0 (N1600)
+     LUT4:I3->O            5   0.704   0.637  m_zigzag/_n0896<7>_1 (m_zigzag/_n0896<7>)
+     LUT4_D:I3->O         24   0.704   1.287  m_zigzag/Mmux_D[5]_GND_7_o_mux_8_OUT2 (m_zigzag/D[5]_GND_7_o_mux_8_OUT<2>)
+     LUT4:I2->O            1   0.704   0.000  m_zigzag/Mmux_Q<3>17_F (N1553)
+     MUXF5:I0->O           6   0.321   0.704  m_zigzag/Mmux_Q<3>17 (m_zigzag/n0369<2>)
+     LUT3:I2->O            1   0.704   0.000  m_zigzag/D[5]_GND_7_o_LessThan_20_o187_F (N1353)
+     MUXF5:I0->O          85   0.321   1.283  m_zigzag/D[5]_GND_7_o_LessThan_20_o187 (m_zigzag/D[5]_GND_7_o_LessThan_20_o187)
+     LUT4:I3->O            3   0.704   0.531  m_zigzag/Msub_GND_7_o_D[5]_sub_24_OUT_lut<3>1 (m_zigzag/Msub_GND_7_o_D[5]_sub_24_OUT_lut<3>)
+     MUXF5:S->O            4   0.739   0.591  m_zigzag/Mmux_Q<1>19_SW0 (N134)
+     LUT4:I3->O            1   0.704   0.455  m_zigzag/Mmux_Q<1>19_1 (m_zigzag/Mmux_Q<1>19)
+     LUT3_D:I2->O          1   0.704   0.455  m_zigzag/D[5]_GND_7_o_LessThan_26_o13_SW0 (N1263)
+     LUT4_D:I2->O          4   0.704   0.591  m_zigzag/D[5]_GND_7_o_LessThan_26_o133_1 (m_zigzag/D[5]_GND_7_o_LessThan_26_o133)
+     LUT4:I3->O           77   0.704   1.311  m_zigzag/Mmux__n094315 (m_zigzag/Mmux__n094315)
+     LUT4:I2->O            4   0.704   0.622  m_zigzag/Mmux__n0943231 (m_zigzag/Mmux__n0943231)
+     LUT4:I2->O            1   0.704   0.455  m_zigzag/Mmux__n09432376_SW0_SW0 (N1039)
+     LUT3_D:I2->O          1   0.704   0.424  m_zigzag/Mmux__n09432376_SW0 (N217)
+     LUT4:I3->O           22   0.704   1.164  m_zigzag/Mmux_n0730231 (m_zigzag/n0730<2>)
+     RAM16X1D:DPRA2->DPO    1   0.704   0.499  m_zigzag/Mram_v223 (m_zigzag/N51)
+     LUT3:I1->O            1   0.704   0.000  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT825_F (N1327)
+     MUXF5:I0->O           1   0.321   0.455  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT825 (m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT825)
+     LUT4:I2->O            1   0.704   0.424  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT868 (m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT868)
+     LUT4:I3->O            1   0.704   0.424  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT8249_SW0_F_SW0 (N1485)
+     LUT4:I3->O            1   0.704   0.000  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT8249_SW0_F (N1379)
+     MUXF5:I0->O           1   0.321   0.424  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT8249_SW0 (N1001)
+     LUT4:I3->O            1   0.704   0.000  m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT8282 (m_zigzag/Mmux_data_o[7]_data_o[7]_mux_400_OUT8282)
+     FDR:D                     0.308          m_zigzag/data_o_7
+    ----------------------------------------
+    Total                     30.548ns (17.002ns logic, 13.546ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_mst'
+  Total number of paths / destination ports: 67 / 67
+-------------------------------------------------------------------------
+Offset:              4.595ns (Levels of Logic = 2)
+  Source:            valid_i (PAD)
+  Destination:       m_demux/valid2_o (FF)
+  Destination Clock: clk_mst rising
+
+  Data Path: valid_i to m_demux/valid2_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.218   1.342  valid_i_IBUF (valid_i_IBUF)
+     LUT2:I1->O            1   0.704   0.420  m_demux/select<1>_inv11 (m_demux/select<1>_inv_0)
+     FDR:R                     0.911          m_demux/valid2_o
+    ----------------------------------------
+    Total                      4.595ns (2.833ns logic, 1.762ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sys'
+  Total number of paths / destination ports: 1272 / 231
+-------------------------------------------------------------------------
+Offset:              8.100ns (Levels of Logic = 7)
+  Source:            addr<6> (PAD)
+  Destination:       m_reg/rdata_1 (FF)
+  Destination Clock: clk_sys rising
+
+  Data Path: addr<6> to m_reg/rdata_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  addr_6_IBUF (addr_6_IBUF)
+     LUT4:I0->O            1   0.704   0.000  m_reg/regs_0_48_ce11 (m_reg/regs_0_48_ce11)
+     MUXF5:I0->O           6   0.321   0.844  m_reg/regs_0_48_ce1_f5 (m_reg/regs_0_48_ce1)
+     LUT4:I0->O           17   0.704   1.055  m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT181 (m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT18)
+     LUT4:I3->O            1   0.704   0.000  m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828_SW01 (m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828_SW0)
+     MUXF5:I1->O           1   0.321   0.595  m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828_SW0_f5 (m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828_SW0_f5)
+     LUT3:I0->O            1   0.704   0.000  m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828 (m_reg/Mmux_GND_2_o_regs[0][15]_mux_14_OUT828)
+     FDRE:D                    0.308          m_reg/rdata_1
+    ----------------------------------------
+    Total                      8.100ns (4.984ns logic, 3.116ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sys'
+  Total number of paths / destination ports: 29 / 28
+-------------------------------------------------------------------------
+Offset:              5.749ns (Levels of Logic = 2)
+  Source:            m_scytale/busy (FF)
+  Destination:       busy (PAD)
+  Source Clock:      clk_sys rising
+
+  Data Path: m_scytale/busy to busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.591   0.762  m_scytale/busy (m_scytale/busy)
+     LUT2:I0->O            1   0.704   0.420  busy1 (busy_OBUF)
+     OBUF:I->O                 3.272          busy_OBUF (busy)
+    ----------------------------------------
+    Total                      5.749ns (4.567ns logic, 1.182ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_mst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_sys        |    3.762|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sys
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+clk_mst                         |   19.235|         |         |         |
+clk_sys                         |   30.548|         |         |         |
+m_zigzag/GND_7_o_GND_7_o_OR_54_o|         |   30.760|         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock m_zigzag/GND_7_o_GND_7_o_OR_54_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_sys        |         |         |    5.511|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 35.58 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 4497980 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  408 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+
